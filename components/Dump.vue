@@ -337,7 +337,7 @@ export default {
       }
 
       try {
-        const { data } = await axios.get(`https://pastebin.ev1dent.dev/api/v1/pastes${this.pasteId}?full=true`)
+        const { data } = await axios.get(`https://pastebin.ev1dent.dev/api/v1/pastes/${this.pasteId}?full=true`)
         data.result.files.forEach(file => {
           if (file.name === "config.yml") {
             this.config = file.content.value
